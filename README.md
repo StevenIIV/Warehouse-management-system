@@ -4,4 +4,4 @@
 <br>
 <div align=center><strong><font size="10">第一次实验室作业：仓库管理系统</font></strong> <font size="2">in java</font> 
 <br> 
-<div align=left>---------by Steven 201632110120</div></div>
+<div align=right>---------by Steven 201632110120</div></div>
