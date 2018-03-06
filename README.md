@@ -1,6 +1,6 @@
 # Warehouse_management_system
-java
+<font size="3" color="red">java</font>
 
 <strong>第一次实验室作业：仓库管理系统</strong>
 
-                        ---------by steven 201632110120
+                        ---------by Steven 201632110120
