@@ -2,7 +2,7 @@
 
 <div align=center><img src="https://github.com/StevenIIV/Warehouse_management_system/blob/master/image/logo.png"/></div>
 <br>
-<div width="250" height="200">
+<div width="100" height="100">
 <div align=center><strong><font size="10">第一次实验室作业：仓库管理系统</font></strong> <font size="2">in java</font> 
 <br> 
 <div align=right>---------by Steven 201632110120</div></div></div>
