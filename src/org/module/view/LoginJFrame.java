@@ -39,26 +39,28 @@ public class LoginJFrame extends JFrame implements MouseListener, FocusListener 
 		backgroundPanel = new ImagePanel(backgrounImage);
 		backgroundPanel.setLayout(null);
 
-		username.setBounds(378, 202, 173, 30);
+		username.setBounds(320, 222, 253, 53);
 		username.setFont(MyFont.Static);
 		username.addFocusListener(this);
-		username.setText("用户名/账号");
+		username.setText("Username");
+		username.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
-		password.setBounds(378, 240, 173, 30);
+		password.setBounds(320, 295, 253, 53);
 		password.setFont(MyFont.Static);
 		password.addFocusListener(this);
-		password.setText("密码");
+		password.setText("Password");
 		password.setEchoChar('\0');
+		password.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
 		button_login = new JButton("登录");
-		button_login.setBounds(380, 280, 70, 27);
+		button_login.setBounds(280, 375, 100, 40);
 		button_login.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.lightBlue));
 		button_login.setForeground(Color.white);
 		button_login.setFont(MyFont.Static);
 		button_login.addMouseListener(this);
 
 		button_reset = new JButton("重置");
-		button_reset.setBounds(480, 280, 70, 27);
+		button_reset.setBounds(425, 375, 100, 40);
 		button_reset.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.red));
 		button_reset.setForeground(Color.white);
 		button_reset.setFont(MyFont.Static);
@@ -83,10 +85,10 @@ public class LoginJFrame extends JFrame implements MouseListener, FocusListener 
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		if (e.getSource() == button_login) {
-			if ("用户名/账号".equals(username.getText())) {
+			if ("Username".equals(username.getText())) {
 				JOptionPane.showMessageDialog(null, "用户名不能为空");
-			} else if ("密码".equals(password.getText())) {
-				JOptionPane.showMessageDialog(null, "用户密码不能为空");
+			} else if ("Password".equals(password.getText())) {
+				JOptionPane.showMessageDialog(null, "密码不能为空");
 			} else {
 				String params[] = { username.getText(), password.getText() };
 				UserService userService = new UserService();
@@ -104,8 +106,8 @@ public class LoginJFrame extends JFrame implements MouseListener, FocusListener 
 				}
 			}
 		} else if (e.getSource() == button_reset) {
-			username.setText("用户名/账号");
-			password.setText("密码");
+			username.setText("Username");
+			password.setText("Password");
 			password.setEchoChar('\0');
 		}
 
@@ -139,11 +141,11 @@ public class LoginJFrame extends JFrame implements MouseListener, FocusListener 
 	@Override
 	public void focusGained(FocusEvent e) {
 		if (e.getSource() == username) {
-			if (username.getText().equals("用户名/账号")) {
+			if (username.getText().equals("Username")) {
 				username.setText("");
 			}
 		} else if (e.getSource() == password) {
-			if (password.getText().equals("密码")) {
+			if (password.getText().equals("Password")) {
 				password.setText("");
 				password.setEchoChar('*');
 			}
@@ -156,11 +158,11 @@ public class LoginJFrame extends JFrame implements MouseListener, FocusListener 
 	public void focusLost(FocusEvent e) {
 		if (e.getSource() == username) {
 			if (username.getText().equals("")) {
-				username.setText("用户名/账号");
+				username.setText("Username");
 			}
 		} else if (e.getSource() == password) {
 			if (password.getText().equals("")) {
-				password.setText("密码");
+				password.setText("Password");
 				password.setEchoChar('\0');
 			}
 		}
