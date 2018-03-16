@@ -3,6 +3,7 @@ package org.main;
 import javax.swing.UIManager;
 
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
+import org.module.view.IndexJFrame;
 import org.module.view.LoginJFrame;
 
 public class Entrance {
